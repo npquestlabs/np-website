@@ -1,65 +1,119 @@
-import Image from "next/image";
+import Link from "next/link";
+
+const values = [
+  {
+    title: "Problem First",
+    body: "Every product begins with a real, verifiable problem — not technology for its own sake.",
+  },
+  {
+    title: "Engineering Excellence",
+    body: "Reliable systems come from quality architecture and careful design, not shortcuts.",
+  },
+  {
+    title: "Long-Term Thinking",
+    body: "We build products and relationships that create value over years, not quick wins.",
+  },
+];
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <section className="bg-ink text-paper">
+        <div className="mx-auto max-w-6xl px-6 py-28 sm:py-36">
+          <p className="text-sm font-medium tracking-widest text-amber-light uppercase">
+            NPQuest Labs
+          </p>
+          <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+            Engineering solutions for difficult problems.
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+          <p className="mt-6 max-w-xl text-lg leading-8 text-paper/70">
+            We look for inefficient systems and turn them into scalable
+            technology — through software engineering, automation, and
+            data-driven systems.
+          </p>
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="rounded-full bg-amber px-6 py-3 text-center text-sm font-semibold text-ink transition-colors hover:bg-amber-light"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+              Talk to us about a problem
+            </Link>
+            <Link
+              href="/services"
+              className="rounded-full border border-paper/25 px-6 py-3 text-center text-sm font-semibold text-paper transition-colors hover:border-paper/50"
             >
-              Learning
-            </a>{" "}
-            center.
+              See what we do
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="max-w-3xl">
+          <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+            Named after the hardest problems in computer science.
+          </h2>
+          <p className="mt-4 leading-7 text-muted">
+            NPQuest Labs takes its name from NP problems — problems that are
+            easy to verify but computationally hard to solve. That is our
+            operating philosophy: we go looking for the problems that are
+            obviously real and obviously painful, but that nobody has
+            properly engineered a solution for yet. We do not build software
+            features for their own sake.
           </p>
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </section>
+
+      <section className="border-y border-line bg-paper-dim">
+        <div className="mx-auto max-w-6xl px-6 py-20">
+          <h2 className="text-2xl font-semibold tracking-tight text-ink sm:text-3xl">
+            What we stand for
+          </h2>
+          <div className="mt-10 grid gap-8 sm:grid-cols-3">
+            {values.map((value) => (
+              <div key={value.title}>
+                <div className="h-1 w-10 bg-amber" />
+                <h3 className="mt-4 text-lg font-semibold text-ink">
+                  {value.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-muted">
+                  {value.body}
+                </p>
+              </div>
+            ))}
+          </div>
+          <div className="mt-10">
+            <Link
+              href="/about"
+              className="text-sm font-semibold text-amber-dark hover:text-amber"
+            >
+              Read our full vision, mission &amp; values →
+            </Link>
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-6 py-20">
+        <div className="rounded-2xl border border-line bg-paper px-8 py-12 sm:px-12">
+          <p className="text-sm font-medium tracking-widest text-amber-dark uppercase">
+            Where we start
+          </p>
+          <p className="mt-4 max-w-2xl text-xl leading-8 text-ink-soft">
+            We are not trying to build the biggest technology platform on day
+            one. The first goal is narrower and harder to fake: find a small
+            number of customers who feel their current process is broken
+            enough to pay for something better.
+          </p>
+          <div className="mt-8">
+            <Link
+              href="/contact"
+              className="rounded-full bg-graphite px-6 py-3 text-sm font-semibold text-paper transition-colors hover:bg-ink"
+            >
+              Tell us what&apos;s broken
+            </Link>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }
