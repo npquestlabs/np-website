@@ -3,7 +3,7 @@ import Link from "next/link";
 const values = [
   {
     title: "Problem First",
-    body: "Every product begins with a real, verifiable problem — not technology for its own sake.",
+    body: "Every product begins with a real, verifiable problem, not technology for its own sake.",
   },
   {
     title: "Engineering Excellence",
@@ -28,7 +28,7 @@ export default function Home() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-8 text-paper/70">
             We look for inefficient systems and turn them into scalable
-            technology — through software engineering, automation, and
+            technology through software engineering, automation, and
             data-driven systems.
           </p>
           <div className="mt-10 flex flex-col gap-4 sm:flex-row">
@@ -54,7 +54,7 @@ export default function Home() {
             Named after the hardest problems in computer science.
           </h2>
           <p className="mt-4 leading-7 text-muted">
-            NPQuest Labs takes its name from NP problems — problems that are
+            NPQuest Labs takes its name from NP problems: problems that are
             easy to verify but computationally hard to solve. That is our
             operating philosophy: we go looking for the problems that are
             obviously real and obviously painful, but that nobody has

@@ -13,7 +13,7 @@ const coreValues = [
   },
   {
     title: "Engineering Excellence",
-    body: "Reliable systems come from quality architecture, careful design, and continuous improvement — not shortcuts.",
+    body: "Reliable systems come from quality architecture, careful design, and continuous improvement, not shortcuts.",
   },
   {
     title: "Long-Term Thinking",
@@ -48,7 +48,7 @@ export default function AboutPage() {
           Meaning behind the name
         </h2>
         <p className="mt-4 leading-8 text-muted">
-          NPQuest Labs takes its name from NP problems in computer science —
+          NPQuest Labs takes its name from NP problems in computer science:
           problems that are easy to verify but computationally hard to solve.
           That is the company&apos;s operating philosophy: we go looking for
           the problems that are obviously real and obviously painful, but
@@ -118,7 +118,7 @@ export default function AboutPage() {
             technology platform on day one. The first goal is narrower and
             harder to fake: find a small number of customers who feel their
             current process is broken enough to pay for something better.
-            Everything else — scale, product breadth, reputation — is built
+            Everything else (scale, product breadth, reputation) is built
             on top of that proof.
           </p>
         </div>

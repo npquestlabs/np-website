@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 
-const CONTACT_EMAIL = "hello@npquestlabs.com";
+const CONTACT_EMAIL = "npquestlabs@gmail.com";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -13,7 +13,7 @@ export default function ContactForm() {
     e.preventDefault();
     const subject = encodeURIComponent(`New inquiry from ${name || "website visitor"}`);
     const body = encodeURIComponent(
-      `${message}\n\n—\n${name}\n${email}`
+      `${message}\n\n--\n${name}\n${email}`
     );
     window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
   }

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/ContactForm";
 
-const CONTACT_EMAIL = "hello@npquestlabs.com";
+const CONTACT_EMAIL = "npquestlabs@gmail.com";
 
 export const metadata: Metadata = {
   title: "Contact",

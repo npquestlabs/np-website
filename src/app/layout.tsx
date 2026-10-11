@@ -16,11 +16,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "NPQuest Labs — Engineering solutions for difficult problems",
+    default: "NPQuest Labs | Engineering solutions for difficult problems",
     template: "%s | NPQuest Labs",
   },
   description:
-    "NPQuest Labs builds practical, scalable technology solutions — software engineering, automation, and AI-driven systems — that help businesses operate efficiently.",
+    "NPQuest Labs builds practical, scalable technology solutions, including software engineering, automation, and AI-driven systems, that help businesses operate efficiently.",
 };
 
 export default function RootLayout({

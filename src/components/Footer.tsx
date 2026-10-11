@@ -1,6 +1,7 @@
+import Image from "next/image";
 import Link from "next/link";
 
-const CONTACT_EMAIL = "hello@npquestlabs.com";
+const CONTACT_EMAIL = "npquestlabs@gmail.com";
 
 export default function Footer() {
   return (
@@ -8,9 +9,13 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-6 py-12">
         <div className="flex flex-col gap-10 md:flex-row md:justify-between">
           <div className="max-w-sm">
-            <span className="text-lg font-semibold tracking-tight">
-              NPQuest<span className="text-amber-light"> Labs</span>
-            </span>
+            <Image
+              src="/brand/logo-on-dark.png"
+              alt="NPQuest Labs"
+              width={600}
+              height={202}
+              className="h-12 w-auto"
+            />
             <p className="mt-3 text-sm text-paper/70">
               Engineering solutions for difficult problems. We turn inefficient
               systems into scalable technology.
